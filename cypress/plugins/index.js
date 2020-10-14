@@ -1,19 +1,10 @@
+// load file preprocessor that comes with this plugin
+// https://github.com/bahmutov/cypress-react-unit-test#install
 module.exports = (on, config) => {
-  require('cypress-react-unit-test/plugins/react-scripts')(on, config);
+  // from the root of the project (folder with cypress.json file)
+  config.env.webpackFilename = 'internals/webpack/webpack.cypress.config.js';
+  require('cypress-react-unit-test/plugins/load-webpack')(on, config);
   // IMPORTANT to return the config object
   // with the any changed environment variables
-  return config
-}
-
-const webpackPreprocessor = require('@cypress/webpack-preprocessor');
-module.exports = (on, config) => {
-  const options = {
-    ...webpackPreprocessor.defaultOptions,
-    // send in the options from your webpack.config.js, so it works the same
-    // as your app's code
-    webpackOptions: require('../../internals/webpack/webpack.cypress.config'),
-    watchOptions: {},
-  }
-  on('file:preprocessor', webpackPreprocessor(options));
   return config;
 }

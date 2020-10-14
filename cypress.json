@@ -1,5 +1,8 @@
 {
   "testFiles": "**/*.cypress.test.tsx",
-  "experimentalComponentTesting": true,
-  "componentFolder": "src"
+  "componentFolder": "src",
+  "fixturesFolder": false,
+  "viewportWidth": 500,
+  "viewportHeight": 500,
+  "experimentalComponentTesting": true
 }

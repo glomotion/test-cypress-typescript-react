@@ -10,6 +10,10 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.ts', '.tsx',  '.jsx', '.css'],
+    // add alias to load "@components" from another folder
+    // so that tests in cypress/component can load components using
+    // import X from '@components/X'
+    // see https://glebbahmutov.com/blog/using-ts-aliases-in-cypress-tests/
   },
   optimization: {
     splitChunks: {

@@ -1,7 +1,14 @@
 const config = require('./webpack.config');
+const path = require('path');
 
 module.exports = {
   ...config,
+  // resolve: {
+  //   ...config.resolve,
+  //   alias: {
+  //     '@components': path.resolve(__dirname, '../../src/components'),
+  //   },
+  // },
   module: {
     rules: [
       ...config.module.rules,

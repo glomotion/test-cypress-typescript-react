@@ -1,15 +1,7 @@
 {
   "extends": "../tsconfig.json",
   "include": [
-    "../node_modules/cypress",
     "../src/**/*.tsx",
     "../typings.d.ts"
   ],
-  "exclude": [
-    "../demo",
-  ],
-  "compilerOptions": {
-    "noEmit": false,
-    "types": ["cypress"]
-  }
 }
