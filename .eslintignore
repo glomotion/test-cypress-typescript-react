@@ -1,0 +1,11 @@
+internals
+*.html
+node_modules
+coverage
+dist
+node_modules
+.eslintrc.js
+jest.config.js
+cypress
+*.cypress.test.tsx
+*.rtl.test.tsx
