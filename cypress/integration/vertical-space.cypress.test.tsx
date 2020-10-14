@@ -3,7 +3,7 @@
 import React from 'react';
 import { mount } from 'cypress-react-unit-test';
 
-import { VerticalSpace } from './vertical-space.component';
+import { VerticalSpace } from '../../src/components/vertical-space/vertical-space.component';
 
 describe('VerticalSpace component', () => {
   it('works', () => {
