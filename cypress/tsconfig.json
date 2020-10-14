@@ -2,6 +2,6 @@
   "extends": "../tsconfig.json",
   "include": [
     "../src/**/*.tsx",
-    "../typings.d.ts"
+    "../typings.d.ts", "integration/*.cypress.test.*"
   ],
 }
