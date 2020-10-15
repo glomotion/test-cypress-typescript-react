@@ -3,11 +3,11 @@
 import React from 'react';
 import { mount } from 'cypress-react-unit-test';
 
-import { VerticalSpace } from '../../src/components/vertical-space/vertical-space.component';
+import { VerticalSpace } from './vertical-space.component';
 
 describe('VerticalSpace component', () => {
   it('works', () => {
     mount(<VerticalSpace>moooo</VerticalSpace>);
-    cy.contains('Hello World!').should('be.visible');
+    cy.contains('moooo').should('be.visible');
   });
 });
