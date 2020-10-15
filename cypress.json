@@ -3,5 +3,9 @@
   "fixturesFolder": false,
   "viewportWidth": 500,
   "viewportHeight": 500,
-  "experimentalComponentTesting": true
+  "experimentalComponentTesting": true,
+  "nodeVersion": "system",
+  "env": {
+    "coverage": true
+  }
 }
