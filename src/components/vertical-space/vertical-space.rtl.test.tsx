@@ -1,3 +1,5 @@
+/// <reference types="Jest" />
+
 import React from 'react';
 import { findByTestId, render, screen } from '@testing-library/react';
 
