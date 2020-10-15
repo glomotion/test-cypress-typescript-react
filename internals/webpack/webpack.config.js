@@ -31,12 +31,12 @@ module.exports = {
       },
       {
         test: /.global.css$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.module.css$/i,
         use: [
-          MiniCssExtractPlugin.loader,
+          'style-loader',
           {
             loader: 'css-loader',
             options: {
@@ -55,6 +55,5 @@ module.exports = {
     ],
   },
   plugins: [
-    new MiniCssExtractPlugin(),
   ],
 };

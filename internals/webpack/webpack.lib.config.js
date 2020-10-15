@@ -17,4 +17,42 @@ module.exports = {
   optimization: {
     minimizer: [new OptimizeCSSAssetsPlugin({})],
   },
+  plugins: [
+    new MiniCssExtractPlugin(),
+  ],
+  module: {
+    rules: [
+      {
+        // Include ts, tsx, js, and jsx files.
+        test: /\.(ts|js)x?$/,
+        exclude: /node_modules/,
+        use: [
+          { loader: 'babel-loader' }, 
+        ],
+      },
+      {
+        test: /.global.css$/i,
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+      },
+      {
+        test: /\.module.css$/i,
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i,
+        loader: 'url-loader',
+        options: {
+          limit: 8192,
+        },
+      },
+    ],
+  },
 };
